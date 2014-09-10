@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Service;
 
-@Service("abc")
+@Service
 public class EmployeeServiceImpl implements EmployeeService {
 
 	@Autowired
