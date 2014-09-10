@@ -12,7 +12,7 @@ public class TestAnnotation {
 	@Test
 	public void testAnnotations1() {
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("beans-config.xml");
-		EmployeeService employeeService = ctx.getBean("EmployeeServiceImpl", EmployeeService.class);
+		EmployeeService employeeService = ctx.getBean("employeeServiceImpl", EmployeeService.class);
 		Employee employee = employeeService.getEmployeeById("57359_FS");
 		System.out.println(employee);
 		List<Employee> employees = employeeService.getEmployeeByName("a");
