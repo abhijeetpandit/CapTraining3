@@ -2,7 +2,7 @@
 /build/
 /bin/
 target/
- 
+/.settings 
 *.class
  
 # Package Files #
