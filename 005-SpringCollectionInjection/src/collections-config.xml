@@ -86,7 +86,7 @@
 	<property name="emailId" value="iiiii.jjjjj@capgemini.com"/>
 </bean>
 
-<util:list id="list1" value-type="org.abhi.s1.datamodel.Employee">
+<util:list id="list1">
 	<ref bean="employee1"/>
 	<ref bean="employee2"/>
 	<ref bean="employee3"/>
