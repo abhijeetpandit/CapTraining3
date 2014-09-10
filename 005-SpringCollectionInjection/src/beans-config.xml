@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+		<bean id="emloyeeDao" class="org.abhi.s1.dao.EmployeeDaoImpl">
+			<property name="employees" ref="list1"></property>
+		</bean>
+		
+		<bean class="org.abhi.s1.service.EmployeeServiceImpl">
+			<constructor-arg ref="emloyeeDao"></constructor-arg>		
+		</bean>
+		<import resource="collections-config.xml"/>
+</beans>

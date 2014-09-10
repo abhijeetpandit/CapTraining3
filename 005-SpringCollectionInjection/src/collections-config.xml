@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+<bean id="employee1" class="org.abhi.s1.datamodel.Employee">
+	<property name="kinId" value="10000_FS"/>
+	<property name="empFirstName" value="Abhijeet"/>
+	<property name="empLastName" value="Pandit"/>
+	<property name="mobileNo" value="11111111111111"/>
+	<property name="emailId" value="abhijeet.pandit@capgemini.com"/>
+</bean>
+
+<bean id="employee2" class="org.abhi.s1.datamodel.Employee">
+	<property name="kinId" value="20000_FS"/>
+	<property name="empFirstName" value="Tom"/>
+	<property name="empLastName" value="Jerry"/>
+	<property name="mobileNo" value="222222222222"/>
+	<property name="emailId" value="tom.jerry@capgemini.com"/>
+</bean>
+
+<bean id="employee3" class="org.abhi.s1.datamodel.Employee">
+	<property name="kinId" value="30000_FS"/>
+	<property name="empFirstName" value="Swat"/>
+	<property name="empLastName" value="Kats"/>
+	<property name="mobileNo" value="3333333333333"/>
+	<property name="emailId" value="swat.kats@capgemini.com"/>
+</bean>
+
+<bean id="employee4" class="org.abhi.s1.datamodel.Employee">
+	<property name="kinId" value="40000_FS"/>
+	<property name="empFirstName" value="Johny"/>
+	<property name="empLastName" value="Quest"/>
+	<property name="mobileNo" value="4444444444444"/>
+	<property name="emailId" value="johny.quest@capgemini.com"/>
+</bean>
+
+<bean id="employee5" class="org.abhi.s1.datamodel.Employee">
+	<property name="kinId" value="50000_FS"/>
+	<property name="empFirstName" value="Thunder"/>
+	<property name="empLastName" value="Cats"/>
+	<property name="mobileNo" value="5555555555555"/>
+	<property name="emailId" value="thunder.cats@capgemini.com"/>
+</bean>
+
+
+<bean id="employee6" class="org.abhi.s1.datamodel.Employee">
+	<property name="kinId" value="60000_FS"/>
+	<property name="empFirstName" value="aaaaa"/>
+	<property name="empLastName" value="bbbbb"/>
+	<property name="mobileNo" value="11111111111111"/>
+	<property name="emailId" value="aaaaa.bbbbb@capgemini.com"/>
+</bean>
+
+<bean id="employee7" class="org.abhi.s1.datamodel.Employee">
+	<property name="kinId" value="70000_FS"/>
+	<property name="empFirstName" value="ccccc"/>
+	<property name="empLastName" value="ddddd"/>
+	<property name="mobileNo" value="222222222222"/>
+	<property name="emailId" value="ccccc.ddddd@capgemini.com"/>
+</bean>
+
+<bean id="employee8" class="org.abhi.s1.datamodel.Employee">
+	<property name="kinId" value="80000_FS"/>
+	<property name="empFirstName" value="eeeee"/>
+	<property name="empLastName" value="fffff"/>
+	<property name="mobileNo" value="3333333333333"/>
+	<property name="emailId" value="eeeee.fffff@capgemini.com"/>
+</bean>
+
+<bean id="employee9" class="org.abhi.s1.datamodel.Employee">
+	<property name="kinId" value="90000_FS"/>
+	<property name="empFirstName" value="ggggg"/>
+	<property name="empLastName" value="hhhhh"/>
+	<property name="mobileNo" value="4444444444444"/>
+	<property name="emailId" value="ggggg.hhhhh@capgemini.com"/>
+</bean>
+
+<bean id="employee10" class="org.abhi.s1.datamodel.Employee">
+	<property name="kinId" value="90001_FS"/>
+	<property name="empFirstName" value="iiiii"/>
+	<property name="empLastName" value="jjjjj"/>
+	<property name="mobileNo" value="5555555555555"/>
+	<property name="emailId" value="iiiii.jjjjj@capgemini.com"/>
+</bean>
+
+<util:list id="list1" value-type="org.abhi.s1.datamodel.Employee">
+	<ref bean="employee1"/>
+	<ref bean="employee2"/>
+	<ref bean="employee3"/>
+	<ref bean="employee4"/>
+	<ref bean="employee5"/>
+</util:list>
+</beans>
