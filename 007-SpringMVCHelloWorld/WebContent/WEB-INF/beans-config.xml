@@ -9,5 +9,6 @@
 		<property name="prefix" value="/WEB-INF/jsp"/>
 		<property name="suffix" value=".jsp"/>
 	</bean>
-	<context:component-scan base-package="org.abhi.controllers"/>
+	<context:annotation-config/>
+	<context:component-scan base-package="org.abhi"/>
 </beans>
