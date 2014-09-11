@@ -3,7 +3,19 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:util="http://www.springframework.org/schema/util"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
-		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd"
+	>
 
+	<bean id="a" class="org.abhi.beans.A"/>
+	<bean id="b" class="org.abhi.beans.B"/>
+	<bean id="z" class="org.abhi.beans.C">
+		<property name="attrC" value="bean name is z"></property>
+	</bean>
+	<bean id="c" class="org.abhi.beans.C">
+		<property name="attrC" value="bean name is c"></property>
+	</bean>
 	
+	<bean id="demoBeanAutowiredByName" class="org.abhi.beans.DemoBean" autowire="byName"/>
+	<bean id="demoBeanAutowiredByType" class="org.abhi.beans.DemoBean" autowire="byType"/>
+	<bean id="demoBeanAutowiredByConstructor" class="org.abhi.beans.DemoBean" autowire="constructor"/>
 </beans>
