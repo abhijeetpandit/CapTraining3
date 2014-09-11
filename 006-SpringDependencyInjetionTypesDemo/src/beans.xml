@@ -8,12 +8,12 @@
 
 	<bean id="a" class="org.abhi.beans.A"/>
 	<bean id="b" class="org.abhi.beans.B"/>
-	<bean id="z" class="org.abhi.beans.C">
+	<!-- <bean id="z" class="org.abhi.beans.C">
 		<property name="attrC" value="bean name is z"></property>
 	</bean>
 	<bean id="c" class="org.abhi.beans.C">
 		<property name="attrC" value="bean name is c"></property>
-	</bean>
+	</bean> -->
 	
 	<bean id="demoBeanAutowiredByName" class="org.abhi.beans.DemoBean" autowire="byName"/>
 	<bean id="demoBeanAutowiredByType" class="org.abhi.beans.DemoBean" autowire="byType"/>
