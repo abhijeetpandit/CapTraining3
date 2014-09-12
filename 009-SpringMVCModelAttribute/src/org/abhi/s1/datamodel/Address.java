@@ -5,7 +5,7 @@ public class Address {
 	private String area;
 	private String city;
 	private String state;
-	private String Country;
+	private String country;
 	
 	
 	
@@ -20,7 +20,7 @@ public class Address {
 		this.area = area;
 		this.city = city;
 		this.state = state;
-		Country = country;
+		this.country = country;
 	}
 
 
@@ -50,14 +50,14 @@ public class Address {
 		this.state = state;
 	}
 	public String getCountry() {
-		return Country;
+		return country;
 	}
 	public void setCountry(String country) {
-		Country = country;
+		this.country = country;
 	}
 	@Override
 	public String toString() {
 		return "Address [pin=" + pin + ", area=" + area + ", city=" + city
-				+ ", state=" + state + ", Country=" + Country + "]";
+				+ ", state=" + state + ", Country=" + country + "]";
 	}
 }

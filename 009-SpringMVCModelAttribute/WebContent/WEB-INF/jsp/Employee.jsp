@@ -39,7 +39,7 @@
 					<td>${empObj.address.area}</td>
 					<td>${empObj.address.city}</td>
 					<td>${empObj.address.state}</td>
-					<td>${empObj.address.Country}</td>
+					<td>${empObj.address.country}</td>
 				</tr>
 			</c:forEach>
 		</table>
