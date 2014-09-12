@@ -10,5 +10,7 @@ public interface EmployeeDao {
 	public List<Employee> getEmployeesByName(String name);
 	
 	public List<Employee> getAllEmployees();
+
+	public void deleteEmployees(String[] toBeDeletedEmployees);
 	
 }

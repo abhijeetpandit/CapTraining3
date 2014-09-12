@@ -9,4 +9,6 @@ public interface EmployeeService {
 	
 	public List<Employee> getEmployeeByName(String name);
 	
+	public void deleteEmployees(String[] kinIds);
+	
 }

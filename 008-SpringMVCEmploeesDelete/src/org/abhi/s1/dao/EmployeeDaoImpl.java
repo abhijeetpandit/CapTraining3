@@ -7,9 +7,6 @@ import java.util.Map;
 import java.util.Set;
 
 import org.abhi.s1.datamodel.Employee;
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -56,5 +53,12 @@ public class EmployeeDaoImpl implements EmployeeDao {
 			employees.add(employeesMap.get(key));
 		}
 		return employees;
+	}
+
+	@Override
+	public void deleteEmployees(String[] toBeDeletedEmployees) {
+		for(String kinId : toBeDeletedEmployees) {
+			employeesMap.remove(kinId);
+		}
 	}
 }

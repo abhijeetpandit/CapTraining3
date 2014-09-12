@@ -40,4 +40,11 @@ public class EmployeeController {
 		System.out.println("EmployeeController.searchEmployeePage()");
 		return "/SearchEmployees";
 	}
+	
+	@RequestMapping(value="/deleteEmp", method=RequestMethod.GET)
+	public String deleteEmp(@RequestParam(value="kinIds") String[] kinIds) {
+		System.out.println(kinIds);
+		employeeService.deleteEmployees(kinIds);
+		return "/SearchEmployees";
+	}
 }

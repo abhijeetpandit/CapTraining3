@@ -10,27 +10,29 @@
 <body>
 	Employee:<br/><br/><br/>
 	
-	
-	<table border=1>
-		<tr>
-			<th>Select</th>
-			<th>KIN id</th>
-			<th>First Name</th>
-			<th>Last Name</th>
-			<th>Mobile</th>
-			<th>email</th>
-		</tr>
-		<c:forEach items="${employees}" var="empObj">
+	<form action="deleteEmp" method="get" name="deleteForm">
+		<table border=1>
 			<tr>
-				<td> <input type="checkbox" value="false"></td>
-				<td>${empObj.kinId}</td>
-				<td>${empObj.empFirstName}</td>
-				<td>${empObj.empLastName}</td>
-				<td>${empObj.mobileNo}</td>
-				<td>${empObj.emailId}</td>
+				<th>Select</th>
+				<th>KIN id</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Mobile</th>
+				<th>email</th>
 			</tr>
-		</c:forEach>
-	</table>
-	<form action=""></form>
+			<c:forEach items="${employees}" var="empObj">
+				<tr>
+					<td> <input type="checkbox" name="kinIds" value="${empObj.kinId}"></td>
+					<td>${empObj.kinId}</td>
+					<td>${empObj.empFirstName}</td>
+					<td>${empObj.empLastName}</td>
+					<td>${empObj.mobileNo}</td>
+					<td>${empObj.emailId}</td>
+				</tr>
+			</c:forEach>
+		</table>
+	
+		<input type="submit" value="Delete">
+	</form>
 </body>
 </html>
