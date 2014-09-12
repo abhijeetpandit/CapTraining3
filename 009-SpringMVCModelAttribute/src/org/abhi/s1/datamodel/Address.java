@@ -7,6 +7,24 @@ public class Address {
 	private String state;
 	private String Country;
 	
+	
+	
+	public Address() {
+	}
+	
+	
+	
+	public Address(Integer pin, String area, String city, String state,
+			String country) {
+		this.pin = pin;
+		this.area = area;
+		this.city = city;
+		this.state = state;
+		Country = country;
+	}
+
+
+
 	public Integer getPin() {
 		return pin;
 	}

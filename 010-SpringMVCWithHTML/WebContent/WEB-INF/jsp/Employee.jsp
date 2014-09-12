@@ -19,12 +19,6 @@
 				<th>Last Name</th>
 				<th>Mobile</th>
 				<th>email</th>
-				
-				<th>pin</th>
-				<th>area</th>
-				<th>city</th>
-				<th>state</th>
-				<th>Country</th>
 			</tr>
 			<c:forEach items="${employees}" var="empObj">
 				<tr>
@@ -34,12 +28,6 @@
 					<td>${empObj.empLastName}</td>
 					<td>${empObj.mobileNo}</td>
 					<td>${empObj.emailId}</td>
-					
-					<td>${empObj.address.pin}</td>
-					<td>${empObj.address.area}</td>
-					<td>${empObj.address.city}</td>
-					<td>${empObj.address.state}</td>
-					<td>${empObj.address.Country}</td>
 				</tr>
 			</c:forEach>
 		</table>

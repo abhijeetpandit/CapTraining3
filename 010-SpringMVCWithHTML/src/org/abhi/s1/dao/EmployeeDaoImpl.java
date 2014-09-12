@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.abhi.s1.datamodel.Address;
 import org.abhi.s1.datamodel.Employee;
 import org.springframework.stereotype.Service;
 
@@ -21,12 +20,6 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		Employee employee3 = new Employee("45666_FS", "Shashank", "Bodkhe", "+915654565455", "shsank.bodke@capgemini.com");
 		Employee employee4 = new Employee("43534_FS", "Sagar", "Kulkarni", "+913534534534", "sagar.kulkarni@capgemini.com");
 		Employee employee5 = new Employee("34543_FS", "Tom", "Jerry", "+9134534534434", "tom.jerry@capgemini.com");
-		
-		employee1.setAddress(new Address(123456, "Aundh", "Pune", "Maharashtra", "India"));
-		employee2.setAddress(new Address(654566, "MG road", "Mumbai", "Maharashtra", "India"));
-		employee3.setAddress(new Address(897841, "Chandani chawk", "Delhi", "Delhi", "India"));
-		employee4.setAddress(new Address(325234, "Nirala bazar", "Aurangabad", "Maharashtra", "India"));
-		employee5.setAddress(new Address(745555, "Model Colony", "Nasik", "Maharashtra", "India"));
 		
 		employeesMap.put(employee1.getKinId(), employee1);
 		employeesMap.put(employee2.getKinId(), employee2);
