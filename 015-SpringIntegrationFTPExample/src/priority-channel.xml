@@ -32,7 +32,7 @@
     <int:priority-queue capacity="50" comparator="ticketComparator"/>
   </int:channel> -->
 
-	<bean id="helloService" class="com.cg.demo.rendezvouschannel.HelloServiceImpl"></bean>
+	 <bean id="helloService" class="com.cg.demo.rendezvouschannel.HelloServiceImpl"></bean> 
 
 	<bean id="ftpSessionFactory" class="org.springframework.integration.ftp.session.DefaultFtpSessionFactory">
 		<property name="host" value="127.0.0.1"></property>
@@ -47,5 +47,5 @@
 
 	<int:channel id="ftpChannel"></int:channel>
 	
-	<int:service-activator input-channel="ftpChannel" ref="helloService"></int:service-activator>
+	 <int:service-activator input-channel="ftpChannel" ref="helloService"></int:service-activator> 
 </beans>
