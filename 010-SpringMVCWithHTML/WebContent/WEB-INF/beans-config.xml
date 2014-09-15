@@ -13,11 +13,22 @@
 		<property name="prefix" value="/WEB-INF/jsp"/>
 		<property name="suffix" value=".jsp"/>
 	</bean> -->
-	<bean id="contentManager" class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
-		<property name="favorPathExtension" value="true"/>
-		<property name="ignoreAcceptHeader" value="true"/>
-		
-	</bean>
+	<bean id="contentManager"
+              class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+              <property name="favorPathExtension" value="true" />
+              <property name="ignoreAcceptHeader" value="true" />
+              <property name="defaultContentType" value="text/html" />
+              <property name="useJaf" value="false" />
+              <property name="mediaTypes">
+                     <map>
+                           <entry key="html" value="text/html" />
+                           <entry key="json" value="application/json" />
+                           <entry key="xml" value="application/xml" />
+                     </map>
+              </property>
+       </bean>
+       <mvc:resources location="/app/" mapping="/app/**" />
+
 	<context:annotation-config/>
 	<context:component-scan base-package="org.abhi"/>
 </beans>
