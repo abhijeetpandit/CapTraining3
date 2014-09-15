@@ -11,7 +11,10 @@ public class Test {
 		ctx.load("beans-config.xml");
 		ctx.refresh();
 		MessageChannel messageChannel = ctx.getBean("helloChannel", MessageChannel.class);
-		Message<String> message = MessageBuilder.withPayload(" string integraion").build();
-		messageChannel.send(message);
+		for(int counter = 0; counter < 10; counter++) {
+			Message<String> message = MessageBuilder.withPayload(" string integraion").build();
+			messageChannel.send(message);
+		}
+		
 	}
 }

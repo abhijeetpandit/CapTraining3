@@ -6,6 +6,10 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 	<bean id="helloSevice" class="org.abhi.si.hello.HelloServiceImpl"></bean>
+	<bean id="helloSevice2" class="org.abhi.si.hello.HelloServiceImpl2"></bean>
+	
 	<int:channel id="helloChannel"/>
+	
 	<int:service-activator input-channel="helloChannel" ref="helloSevice"></int:service-activator>
+	<int:service-activator input-channel="helloChannel" ref="helloSevice2"></int:service-activator>
 </beans>
