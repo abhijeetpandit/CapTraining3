@@ -38,7 +38,7 @@ public class EmployeeController {
 	@RequestMapping(value="/search", method=RequestMethod.GET)
 	public String searchEmployeePage() {
 		System.out.println("EmployeeController.searchEmployeePage()");
-		return "/SearchEmployees";
+		return "/WEB-INF/html/EmpTest.html";
 	}
 	
 	@RequestMapping(value="/searchByHtml", method=RequestMethod.GET)
