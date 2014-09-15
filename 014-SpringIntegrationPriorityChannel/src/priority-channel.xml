@@ -30,6 +30,6 @@
     <int:priority-queue capacity="50" comparator="ticketComparator"/>
   </int:channel>
 
-	<bean id="ticketComparator" class="com.cg.demo.rendezvouschannel.TicketComparator"></bean>
+   <bean id="ticketComparator" class="com.cg.demo.rendezvouschannel.TicketComparator"></bean>
 
 </beans>
