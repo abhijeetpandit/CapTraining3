@@ -1,5 +1,7 @@
 package org.abhi.beans;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 public class Address {
 	private String area;
 	private String street;

@@ -13,9 +13,16 @@
 
 <int:channel id="inputChannel"></int:channel>
 
-<bean id="marsheller" class="org.springframework.oxm.castor.CastorMarshaller"></bean>
+<bean id="marsheller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+	<property name="classesToBeBound">
+		<list>
+			<value>org.abhi.beans.Customer</value>
+			<value>org.abhi.beans.Address</value>
+		</list>
+	</property>
+</bean>
 
-<int-xml:marshalling-transformer marshaller="marsheller" input-channel="inputChannel" output-channel="outputChannel" result-type="DOMResult"></int-xml:marshalling-transformer>
+<int-xml:marshalling-transformer marshaller="marsheller" input-channel="inputChannel" output-channel="outputChannel" result-type="StringResult"></int-xml:marshalling-transformer>
 
 <int:channel id="outputChannel"></int:channel>
 
