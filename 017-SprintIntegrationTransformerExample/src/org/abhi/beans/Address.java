@@ -39,6 +39,11 @@ public class Address {
 	public void setCountry(String country) {
 		Country = country;
 	}
+	@Override
+	public String toString() {
+		return "Address [area=" + area + ", street=" + street + ", city="
+				+ city + ", Country=" + Country + "]";
+	}
 	
 	
 }

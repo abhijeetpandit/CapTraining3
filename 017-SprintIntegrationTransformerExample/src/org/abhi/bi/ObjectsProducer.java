@@ -16,11 +16,24 @@ public class ObjectsProducer {
 		messageChannel.send(MessageBuilder.withPayload(new Customer("John", "Constantine",  new Address("Park street", "DP road", "Wakad", "India"))).build());
 		messageChannel.send(MessageBuilder.withPayload(new Customer("Tony", "Stark",  new Address("Model colony", "Ambedkar chawk", "Aundh", "India"))).build());
 	
-		PollableChannel outputChannel = ctx.getBean("outputChannel", PollableChannel.class);
+		//PollableChannel outputChannel = ctx.getBean("outputChannel", PollableChannel.class);
+		
+		PollableChannel newOutputChannel = ctx.getBean("newOutputChannel", PollableChannel.class);
 		
 		while(true) {
-			System.out.println(outputChannel.receive().getPayload());
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			System.out.println("--->" + newOutputChannel.receive().getPayload());
 		}
+		
+		
+		
+		
 	}
 	
 }
