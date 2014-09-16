@@ -35,17 +35,17 @@ public class EmployeeController {
 		return "/Employee";
 	}
 	
-	@RequestMapping(value="/search", method=RequestMethod.GET)
+	/*@RequestMapping(value="/search", method=RequestMethod.GET)
 	public String searchEmployeePage() {
 		System.out.println("EmployeeController.searchEmployeePage()");
 		return "/WEB-INF/html/EmpTest.html";
-	}
-	
+	}*/
+	/*
 	@RequestMapping(value="/searchByHtml", method=RequestMethod.GET)
 	public String searchbyHtmlEmployeePage() {
 		System.out.println("EmployeeController.searchEmployeePage()");
-		return "/NewFile";
-	}
+		return "/WEB-INF/html/EmpTest.html";
+	}*/
 	
 	@RequestMapping(value="/deleteEmp", method=RequestMethod.GET)
 	public String deleteEmp(@RequestParam(value="kinIds") String[] kinIds) {

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:int="http://www.springframework.org/schema/integration"
+	xmlns:int-ftp="http://www.springframework.org/schema/integration/ftp"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:int-xml="http://www.springframework.org/schema/integration/xml"
+	xsi:schemaLocation="http://www.springframework.org/schema/integration/xml http://www.springframework.org/schema/integration/xml/spring-integration-xml-2.1.xsd
+		http://www.springframework.org/schema/integration/ftp http://www.springframework.org/schema/integration/ftp/spring-integration-ftp-2.0.xsd
+		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration-2.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+<int:channel id="inputChannel"></int:channel>
+
+<bean id="marsheller" class="org.springframework.oxm.castor.CastorMarshaller"></bean>
+
+<int-xml:marshalling-transformer marshaller="marsheller" input-channel="inputChannel" output-channel="outputChannel" result-type="DOMResult"></int-xml:marshalling-transformer>
+
+<int:channel id="outputChannel"></int:channel>
+
+<bean id="receiver" class="org.abhi.bi.ObjectReeiver"></bean>
+
+<int:channel id="outputChannel2"></int:channel>
+
+<int-xml:unmarshalling-transformer unmarshaller="marsheller" input-channel="outputChannel" output-channel="outputChannel2"></int-xml:unmarshalling-transformer>
+
+<int:service-activator input-channel="outputChannel2" ref="receiver"></int:service-activator>
+
+</beans>
