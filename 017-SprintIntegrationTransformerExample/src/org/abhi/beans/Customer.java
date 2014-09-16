@@ -3,16 +3,16 @@ package org.abhi.beans;
 public class Customer {
 	private String name;
 	private String lastName;
-	private String city;
+	private Address address;
 	
 	public Customer() {
 	}
 	
-	public Customer(String name, String lastName, String city) {
+	public Customer(String name, String lastName, Address city) {
 		super();
 		this.name = name;
 		this.lastName = lastName;
-		this.city = city;
+		this.address = city;
 	}
 
 	public String getName() {
@@ -27,15 +27,15 @@ public class Customer {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public String getCity() {
-		return city;
+	public Address getAddress() {
+		return address;
 	}
-	public void setCity(String city) {
-		this.city = city;
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 	@Override
 	public String toString() {
-		return "Customer [name=" + name + ", lastName=" + lastName + ", city="
-				+ city + "]";
+		return "Customer [name=" + name + ", lastName=" + lastName + ", address="
+				+ address + "]";
 	}
 }

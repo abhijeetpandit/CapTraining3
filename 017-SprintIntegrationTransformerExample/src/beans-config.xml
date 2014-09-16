@@ -15,6 +15,4 @@
 </int:channel>
 <int:object-to-json-transformer input-channel="inputChannel" output-channel="outputChannel"></int:object-to-json-transformer>
 
-
-
 </beans>
