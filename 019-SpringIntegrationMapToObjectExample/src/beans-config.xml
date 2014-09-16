@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:int="http://www.springframework.org/schema/integration"
+	xmlns:int-ftp="http://www.springframework.org/schema/integration/ftp"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/integration/ftp http://www.springframework.org/schema/integration/ftp/spring-integration-ftp-2.0.xsd
+		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration-2.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+<bean id="receivedObjectsPrinter" class="org.abhi.bi.ReceivedObjectsPrinter"></bean>
+<int:channel id="inputChannel"></int:channel>
+<int:channel id="outputChannel"></int:channel>
+<int:object-to-json-transformer input-channel="inputChannel" output-channel="outputChannel"></int:object-to-json-transformer>
+
+<int:channel id="newOutputChannel">
+</int:channel>
+
+<int:json-to-object-transformer input-channel="outputChannel" output-channel="newOutputChannel" type="org.abhi.beans.Customer"></int:json-to-object-transformer>
+
+<int:channel id="newOutputChannel2">
+</int:channel>
+
+<int:object-to-map-transformer input-channel="newOutputChannel" output-channel="newOutputChannel2"></int:object-to-map-transformer>
+
+<int:channel id="newOutputChannel3">
+	<int:queue capacity="50"/>
+</int:channel>
+
+<int:map-to-object-transformer input-channel="newOutputChannel2" output-channel="newOutputChannel3" type="org.abhi.beans.Customer"></int:map-to-object-transformer>
+
+
+
+</beans>
