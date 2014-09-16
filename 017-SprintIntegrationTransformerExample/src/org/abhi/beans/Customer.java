@@ -5,6 +5,16 @@ public class Customer {
 	private String lastName;
 	private String city;
 	
+	public Customer() {
+	}
+	
+	public Customer(String name, String lastName, String city) {
+		super();
+		this.name = name;
+		this.lastName = lastName;
+		this.city = city;
+	}
+
 	public String getName() {
 		return name;
 	}

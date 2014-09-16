@@ -10,7 +10,11 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
 <int:channel id="inputChannel"></int:channel>
-<int:channel id="outputChannel"></int:channel>
+<int:channel id="outputChannel">
+	<int:queue capacity="50" />
+</int:channel>
 <int:object-to-json-transformer input-channel="inputChannel" output-channel="outputChannel"></int:object-to-json-transformer>
+
+
 
 </beans>
