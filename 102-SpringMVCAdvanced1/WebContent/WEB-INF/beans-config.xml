@@ -20,12 +20,13 @@
                 <entry key="html" value="text/html"/>
             </map>
           </property>
+          <property name="ignoreAcceptHeader" value="true" />
 </bean>
 
-<bean
+	 <bean
         class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="order" value="2" />
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
-    </bean>
+    </bean> 
 </beans>
