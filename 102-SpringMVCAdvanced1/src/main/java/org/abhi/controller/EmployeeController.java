@@ -37,6 +37,6 @@ public class EmployeeController {
 	
 	@RequestMapping(value="/staticHello", method=RequestMethod.GET)
 	public String sayStaticHello() {
-		return "hello2";
+		return "redirect:/html/Hello2.html";
 	}
 }
